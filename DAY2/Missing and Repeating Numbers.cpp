@@ -10,3 +10,4 @@ pair<int,int> missingAndRepeating(vector<int> &arr, int n)
 	}
 	return {x,y};
 }
+kokkk
