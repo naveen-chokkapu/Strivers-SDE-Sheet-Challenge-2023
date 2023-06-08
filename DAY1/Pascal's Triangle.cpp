@@ -16,3 +16,12 @@ vector<vector<long long int>> printPascal(int n)
       }
       return ans;
 }
+
+
+// nCr
+// res = 1;
+// for(i=0; i<r; i++) {
+//   res *= (n-i);
+//   res /= (i+1);
+// }
+// return res;
