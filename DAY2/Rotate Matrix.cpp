@@ -34,4 +34,4 @@ void rotateMatrix(vector<vector<int>> &mat, int n, int m)
 }
 
 
-// Its ultra bruteforce does be scary😂 !! 
+// Its ultra bruteforce dont be scary😂 !! 
