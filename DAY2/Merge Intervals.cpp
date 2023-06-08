@@ -1,18 +1,24 @@
-vector<vector<int>> mergeIntervals(vector<vector<int>> &Int)
+#include <bits/stdc++.h> 
+/*
+
+    intervals[i][0] = start point of i'th interval
+    intervals[i][1] = finish point of i'th interval
+
+*/
+
+vector<vector<int>> mergeIntervals(vector<vector<int>> &t)
 {
     // Write your code here.
-    sort(Int.begin(),Int.end());
+    sort(t.begin(),t.end());
     vector<vector<int>> ans;
-    int x = INT_MAX;
-    for(int i=1;i<Int.size();i++) {
-        if((Int[i-1][1]>=Int[i][0] && Int[i-1][1]<=Int[i][1]) || Int[i-1][1]>=Int[i][1]) {
-            x=min(x,Int[i-1][0]); Int[i][1] = max(Int[i][1],Int[i-1][1]);
-        }
+    int i,x=t[0][0],y=t[0][1];
+    for(i=1;i<t.size();i++) {
+        if(t[i][0]>=x && t[i][0]<=y) y=max(y,t[i][1]);
         else {
-            ans.push_back({min(Int[i-1][0],x),Int[i-1][1]});
-            x = INT_MAX;
+            ans.push_back({x,y});
+            x=t[i][0],y=t[i][1];
         }
     }
-    ans.push_back({min(Int[Int.size()-1][0],x),Int[Int.size()-1][1]});
+    ans.push_back({x,y});
     return ans;
 }
