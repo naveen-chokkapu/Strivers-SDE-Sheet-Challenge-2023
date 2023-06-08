@@ -21,7 +21,10 @@ vector<vector<long long int>> printPascal(int n)
 // nCr
 // res = 1;
 // for(i=0; i<r; i++) {
+  
 //   res *= (n-i);
 //   res /= (i+1);
+    // If we print res at every index(i) we gets row in pascal triangle
+
 // }
 // return res;
